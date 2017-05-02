@@ -33,6 +33,35 @@ int main(){
 
     //liberar memoria
     delete[] apuntador;
+        apuntador = NULL;
     delete[] apuntador;
+
+    //matrices
+    int** matriz;
+
+    matriz = new int*[5];
+    
+    for(int i=0;i<5;i++){
+        matriz[i] = new int[5];
+    }
+    //poblar matriz
+    for(int i = 0;i<5;i++){
+        for(int j=0;j<5;j++){
+            matriz[i][j]=i+j;
+        }
+    }
+    
+    //usar la matriz
+
+
+
+    //liberar la memoria
+    for(int i=0;i<5;i++){
+        delete[] matriz[i];
+    }
+    delete[] matriz;
+
+
+
     return 0;
 }
